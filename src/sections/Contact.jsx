@@ -27,7 +27,7 @@ export const Contact = () => {
     setStatus("");
 
     try {
-      await axios.post("http://127.0.0.1:8000/contact", formData);
+      await axios.post("https://portfolio-backend-50r6.onrender.com/contact", formData);
       setStatus("success");
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
