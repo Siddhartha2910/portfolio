@@ -14,7 +14,10 @@ load_dotenv()
 app.add_middleware(
     CORSMiddleware,
     # allow_origins=["http://localhost:5173"],
-    allow_origins=["*"],
+    allow_origins=[
+    "http://localhost:5173",
+    "portfolio-gs8qas32g-gade-siddhartha-kumars-projects.vercel.app"
+],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
