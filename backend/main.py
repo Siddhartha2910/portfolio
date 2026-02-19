@@ -10,15 +10,16 @@ load_dotenv()
 # Allow frontend (Vite runs on 5173)
 app.add_middleware(
     CORSMiddleware,
-    # allow_origins=["http://localhost:5173"],
     allow_origins=[
-    "http://localhost:5173",
-    "https://portfolio-gs8qas32g-gade-siddhartha-kumars-projects.vercel.app"
-],
+        "http://localhost:5173",
+        "https://portfolio.vercel.app",  # your main production domain
+    ],
+    allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 class ContactForm(BaseModel):
     name: str
