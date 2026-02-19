@@ -1,9 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 import os
 from dotenv import load_dotenv
 import resend
@@ -16,7 +13,7 @@ app.add_middleware(
     # allow_origins=["http://localhost:5173"],
     allow_origins=[
     "http://localhost:5173",
-    "portfolio-gs8qas32g-gade-siddhartha-kumars-projects.vercel.app"
+    "https://portfolio-gs8qas32g-gade-siddhartha-kumars-projects.vercel.app"
 ],
     allow_credentials=True,
     allow_methods=["*"],
