@@ -27,7 +27,7 @@ export const Contact = () => {
     setStatus("");
 
     try {
-      await axios.post("https://portfolio-backend-50r6.onrender.com/contact", formData);
+      await axios.post(`${import.meta.env.VITE_API_URL}/contact`, formData);
       setStatus("success");
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
