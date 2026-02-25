@@ -7,8 +7,8 @@ const HeroPhoto = () => {
 
         {/* Desktop: Tilted Card */}
       <div className="hidden md:block">
-        {/* <TiltedCard
-          imageSrc="/image2.jpeg"
+        <TiltedCard
+          imageSrc={`${import.meta.env.BASE_URL}image2.jpeg`}
           altText="Gade Siddhartha Kumar"
           containerHeight="340px"
           containerWidth="340px"
@@ -19,20 +19,13 @@ const HeroPhoto = () => {
           showMobileWarning={false}
           showTooltip={false}
           displayOverlayContent={false}
-        /> */}
-        <div className="hidden md:block">
-  <img
-    src="/image2.jpeg"
-    alt="Test"
-    className="w-80 h-80 object-cover rounded-xl"
-  />
-</div>
+        />
       </div>
 
       {/* Mobile: Static Image */}
       <div className="block md:hidden">
         <img
-          src="/image2.jpeg"
+          src={`${import.meta.env.BASE_URL}image2.jpeg`}
           alt="Gade Siddhartha Kumar"
           className="w-60 h-69 rounded-2xl object-cover shadow-lg"
         />
