@@ -8,7 +8,7 @@ const HeroPhoto = () => {
         {/* Desktop: Tilted Card */}
       <div className="hidden md:block">
         <TiltedCard
-          imageSrc="public\image2.jpeg"
+          imageSrc="public/image2.jpeg"
           altText="Gade Siddhartha Kumar"
           containerHeight="340px"
           containerWidth="340px"
@@ -25,7 +25,7 @@ const HeroPhoto = () => {
       {/* Mobile: Static Image */}
       <div className="block md:hidden">
         <img
-          src="public\image2.jpeg"
+          src="public/image2.jpeg"
           alt="Gade Siddhartha Kumar"
           className="w-60 h-69 rounded-2xl object-cover shadow-lg"
         />
