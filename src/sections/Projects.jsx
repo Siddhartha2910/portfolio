@@ -28,7 +28,7 @@ export const Projects = () => {
         gap-10
       ">
         <ProjectCard
-          image="/image3.jpg"
+          image={`${import.meta.env.BASE_URL}image3.jpeg`}
           title="HygroSkin"
           description="AI-powered smart skincare wearable that monitors hydration and provides insights."
           github="https://github.com/yourrepo"
@@ -36,7 +36,7 @@ export const Projects = () => {
         />
 
         <ProjectCard
-          image="/image3.jpg"
+          image={`${import.meta.env.BASE_URL}image3.jpeg`}
           title="Crypto Time Series Analysis"
           description="Time series forecasting using Matic cryptocurrency dataset."
           github="https://github.com/yourrepo"
@@ -44,7 +44,7 @@ export const Projects = () => {
         />
 
         <ProjectCard
-          image="/image3.jpg"
+          image={`${import.meta.env.BASE_URL}image3.jpeg`}
           title="Crypto Time Series Analysis"
           description="Time series forecasting using Matic cryptocurrency dataset."
           github="https://github.com/yourrepo"
@@ -52,7 +52,7 @@ export const Projects = () => {
         />
 
         <ProjectCard
-          image="/image3.jpg"
+          image={`${import.meta.env.BASE_URL}image3.jpeg`}
           title="Crypto Time Series Analysis"
           description="Time series forecasting using Matic cryptocurrency dataset."
           github="https://github.com/yourrepo"
@@ -60,7 +60,7 @@ export const Projects = () => {
         />
 
         <ProjectCard
-          image="/image3.jpg"
+          image={`${import.meta.env.BASE_URL}image3.jpeg`}
           title="Crypto Time Series Analysis"
           description="Time series forecasting using Matic cryptocurrency dataset."
           github="https://github.com/yourrepo"
