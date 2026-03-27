@@ -5,7 +5,7 @@ const menuItems = [
   { label: "About", ariaLabel: "Go to about section", link: "#about" },
   { label: "Projects", ariaLabel: "Go to projects section", link: "#projects" },
   { label: "Experience", ariaLabel: "Go to experience section", link: "#experience" },
-  { label: "Testimonials", ariaLabel: "Go to testimonials section", link: "#testimonials" },
+  { label: "Skills", ariaLabel: "Go to skills section", link: "#skills" },
   { label: "Contact", ariaLabel: "Go to contact section", link: "#contact" },
 ];
 

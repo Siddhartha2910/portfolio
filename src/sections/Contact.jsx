@@ -42,7 +42,7 @@ export const Contact = () => {
     <section
       id="contact"
       className="relative min-h-screen overflow-hidden bg-black flex items-center px-6 md:px-16 py-20"
-      style={{ scrollMarginTop: "60px" }}
+      style={{ scrollMarginTop: "50px" }}
     >
       {/* Snow Background */}
       <div className="absolute inset-0 z-0 pointer-events-none">

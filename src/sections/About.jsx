@@ -40,8 +40,15 @@ export const About = () => {
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
           viewport={{ once: true }}
         >
-          <h2 className="about-title">About Me</h2>
-          <p className="about-text">
+          <div className="w-full">
+            <div className="text-center md:text-left">
+              <h2 className="text-4xl md:text-5xl font-bold relative inline-block mb-4 group text-center md:text-left">
+                About Me
+                <span className="absolute left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0 -bottom-2 h-0.5 w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
+              </h2>
+            </div>
+          </div>
+          <p className="about-text text-justify md:text-left">
             I'm a passionate Web Developer focused on crafting clean, responsive, and user-friendly web applications. With a strong eye for design and a love for efficient code, I enjoy turning complex ideas into simple, functional, and visually engaging digital experiences.
             <br />
             {/* <br /> */}

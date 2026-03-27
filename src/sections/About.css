@@ -108,11 +108,35 @@
     margin: auto;
   }
 
+  /* Reduce vertical spacing on small screens */
+  .about-section {
+    min-height: auto;
+    padding: 50px 10px; /* smaller top/bottom padding */
+    padding-top: 140px;
+  }
+
+  .about-container {
+    gap: 18px; /* reduce gap between stacked items */
+    width: 95%;
+    margin: 8px auto;
+  }
+
   .about-title,
   .about-text {
     transform: none;
-    text-align: left; /* better readability on mobile */
-    hyphens: auto;
+  }
+
+  /* Mobile: center heading and justify body text without splitting words */
+  .about-title {
+    text-align: center;
+  }
+
+  .about-text {
+    text-align: justify;
+    hyphens: none;
+    overflow-wrap: normal;
+    word-break: normal;
+    white-space: normal;
   }
 
   .about-title {

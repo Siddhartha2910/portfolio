@@ -4,7 +4,7 @@ import {Hero} from "@/sections/Hero";
 import {About} from "@/sections/About";
 import {Projects} from "@/sections/Projects";
 import {Experience} from "@/sections/Experience";
-import {Testimonials} from "@/sections/Testimonials";
+import {Skills} from "@/sections/Skills";
 import {Contact} from "@/sections/Contact";
 import Loader from "./components/common/Loader";
 import ClickSpark from "./components/animations/ClickSpark";
@@ -53,7 +53,7 @@ function App() {
         <About />
         <Projects />
         <Experience />
-        <Testimonials />
+        <Skills />
         <Contact />
       </main>
       </ClickSpark>

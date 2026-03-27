@@ -46,15 +46,19 @@ useEffect(() => {
     >
         
       {/* Heading */}
-      <div className="text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold text-white">
+      <div className="text-center mb-10">
+        <h2 className="text-4xl md:text-5xl font-bold relative inline-block mb-4 group">
           Experience
+          <span className="absolute left-1/2 -translate-x-1/2 -bottom-2 h-0.5 w-0 bg-white transition-all duration-500 group-hover:w-full"></span>
         </h2>
-        <p className="text-gray-400 mt-3">My journey so far</p>
+
+        <p className="text-gray-400 text-center mb-6">
+          My journey so far
+        </p>
       </div>
     {/* 📱 MOBILE CAROUSEL */}
         <div className="block md:hidden">
-        <div className="relative min-h-[380px] flex justify-center">
+        <div className="relative min-h-95 flex justify-center">
           <Carousel
           items={experiences}
           baseWidth={320}
@@ -70,7 +74,7 @@ useEffect(() => {
       <div className="relative max-w-4xl mx-auto">
 
         {/* Vertical Line (Desktop Only) */}
-        <div className="hidden md:block absolute left-1/2 top-0 h-full w-[1px] bg-gradient-to-b from-white/40 to-transparent"></div>
+        <div className="hidden md:block absolute left-1/2 top-0 h-full w-px bg-linear-to-b from-white/40 to-transparent"></div>
 
         <div className="flex flex-col gap-14">
 
@@ -114,7 +118,7 @@ useEffect(() => {
 
                   <h3 className="text-xl font-semibold text-white tracking-wide">
                     {exp.role}
-                    <div className="w-10 h-[2px] bg-white/30 mt-2"></div>
+                    <div className="w-10 h-0.5 bg-white/30 mt-2"></div>
                   </h3>
 
                   <p className="text-sm text-gray-400 mt-1">
