@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import MagnetLines from "../components/animations/MagnetLines";
-
+import vercelIcon from "../assets/vercel.svg";
+import expressicon from "../assets/express.svg";
+import githubicon from "../assets/github.svg";
+import socketdotioicon from "../assets/socketdotio.svg";
 export const Skills = () => {
   const skillsData = {
     frontend: [
@@ -11,14 +14,14 @@ export const Skills = () => {
       { name: "HTML5", type: "Markup", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
       { name: "CSS3", type: "Styling", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
       { name: "Tailwind CSS", type: "Styling", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
-      { name: "Socket.IO", type: "Realtime", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg" },
+      { name: "Socket.IO", type: "Realtime", icon: socketdotioicon },
       { name: "REST APIs", type: "Integration", icon: "https://img.icons8.com/ios-filled/50/ffffff/api.png" },
     ],
     backend: [
       { name: "Python", type: "Language", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
       { name: "FastAPI", type: "Framework", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" },
       { name: "Node.js", type: "Runtime", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
-      { name: "Express.js", type: "Framework", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+      { name: "Express.js", type: "Framework", icon: expressicon },
       { name: "MongoDB", type: "Database", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
       { name: "PostgreSQL", type: "Database", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
       { name: "OAuth", type: "Auth", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oauth/oauth-original.svg" },
@@ -35,9 +38,9 @@ export const Skills = () => {
     { name: "VS Code", type: "Editor", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
     { name: "Postman", type: "API Testing", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" },
     { name: "Jupyter Notebook", type: "Notebook", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" },
-    { name: "GitHub", type: "Version Control", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+    { name: "GitHub", type: "Version Control", icon: githubicon },
     { name: "Kaggle", type: "Platform", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kaggle/kaggle-original.svg" },
-    { name: "Vercel", type: "Deployment", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" },
+    { name: "Vercel", type: "Deployment", icon: vercelIcon },
     { name: "Streamlit", type: "App Framework", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/streamlit/streamlit-original.svg" },
   ],
   };
@@ -120,7 +123,7 @@ export const Skills = () => {
           transition-all duration-150
           ${visible.includes(i) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}
           hover:border-white/20 hover:bg-neutral-900`}
-          style={{ transitionDelay: `${i * 60}ms` }}
+          style={{ transitionDelay: `${i * 20}ms` }}
         >
           <img
             src={skill.icon}

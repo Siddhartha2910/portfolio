@@ -4,40 +4,52 @@ import ProjectCard from "../components/animations/ProjectCard";
 
 const projects = [
   {
-    image: `${import.meta.env.BASE_URL}image3.jpeg`,
-    title: "HygroSkin",
-    description: "AI-powered smart skincare wearable that monitors hydration and provides insights.",
-    github: "https://github.com/yourrepo",
-    tech: ["React", "FastAPI", "Machine Learning"],
+    image: `${import.meta.env.BASE_URL}p11.png`,
+    title: "Chat-App: Real-time Messaging Platform",
+    description:
+      "Full-stack real-time messaging app supporting 100+ users with JWT authentication and low-latency Socket.IO communication.",
+    github: "https://github.com/Siddhartha2910/Chat-App",
+    tech: ["MERN", "Socket.IO", "JWT", "Tailwind CSS", "Bcrypt.js"],
   },
   {
-    image: `${import.meta.env.BASE_URL}image3.jpeg`,
-    title: "Crypto Time Series Analysis",
-    description: "Time series forecasting using Matic cryptocurrency dataset.",
-    github: "https://github.com/yourrepo",
-    tech: ["Python", "Pandas", "Matplotlib"],
+    image: `${import.meta.env.BASE_URL}p22.png`,
+    title: "AURA: Augmented User-Robot Alliance",
+    description:
+      "AI-driven human-robot collaboration system with predictive assistance and stereo vision achieving 85%+ real-time tracking accuracy.",
+    github: "https://github.com/Siddhartha2910/AURA",
+    tech: ["Computer Vision", "Embedded Systems", "FastAPI"],
   },
   {
-    image: `${import.meta.env.BASE_URL}image3.jpeg`,
-    title: "Crypto Time Series Analysis",
-    description: "Time series forecasting using Matic cryptocurrency dataset.",
-    github: "https://github.com/yourrepo",
-    tech: ["Python", "Pandas", "Matplotlib"],
+    image: `${import.meta.env.BASE_URL}p33.png`,
+    title: "Codestylepoliceman: AI Project Monitoring",
+    description:
+      "Webhook-based platform processing 1000+ events with LLaMA-powered insights improving risk detection accuracy by 80%.",
+    github: "https://github.com/Siddhartha2910/codestylepoliceman",
+    tech: ["Next.js", "TypeScript", "Supabase", "PostgreSQL"],
   },
   {
-    image: `${import.meta.env.BASE_URL}image3.jpeg`,
+    image: `${import.meta.env.BASE_URL}p44.png`,
     title: "Crypto Time Series Analysis",
-    description: "Time series forecasting using Matic cryptocurrency dataset.",
-    github: "https://github.com/yourrepo",
-    tech: ["Python", "Pandas", "Matplotlib"],
+    description:
+      "ARIMA-based forecasting model with 75%+ accuracy and automated pipeline analyzing 1000+ cryptocurrency data points.",
+    github: "https://github.com/Siddhartha2910/crypto-time-series-analysis",
+    tech: ["Python", "ARIMA", "Pandas", "Statsmodels", "Time Series Analysis"],
   },
   {
-    image: `${import.meta.env.BASE_URL}image3.jpeg`,
-    title: "Crypto Time Series Analysis",
-    description: "Time series forecasting using Matic cryptocurrency dataset.",
-    github: "https://github.com/yourrepo",
-    tech: ["Python", "Pandas", "Matplotlib"],
-  },
+  image: `${import.meta.env.BASE_URL}p55.png`,
+  title: "House Price Prediction App",
+  description:
+    "Interactive Streamlit app using Linear Regression to predict house prices with real-time inputs, visualizations, and performance metrics.",
+  github: "https://github.com/Siddhartha2910/House-Price-Prediction-App",
+  tech: [
+    "Python",
+    "Streamlit",
+    "Scikit-learn",
+    "Pandas",
+    "Matplotlib",
+    "Plotly"
+  ],
+}
 ];
 
 /* ── Heading animation ── */
@@ -46,7 +58,7 @@ const HeadingReveal = () => {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <div ref={ref} className="text-center mb-12 overflow-hidden">
+    <div ref={ref} className="text-center mb-5 overflow-hidden">
       <motion.h2
         initial={{ y: 60, opacity: 0 }}
         animate={inView ? { y: 0, opacity: 1 } : {}}
@@ -270,7 +282,7 @@ export const Projects = () => {
   useEffect(() => {
     const updateMargin = () => {
       if (window.innerWidth >= 768) {
-        setScrollMargin("10px");
+        setScrollMargin("6px");
       } else {
         setScrollMargin("0px");
       }

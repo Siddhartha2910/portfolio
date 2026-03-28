@@ -160,7 +160,7 @@ export const Hero = () => {
 
             </div>
                     {/* RIGHT – photo */}
-                    <div className="w-full flex justify-center">
+                    <div className="w-full flex justify-center z-30">
                         <HeroPhoto />
                         {/* <HeroPhoto2/> */}
 

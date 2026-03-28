@@ -2,7 +2,9 @@ import PixelSnow from "../components/backgrounds/PixarSnow";
 import Lanyard from "../components/animations/Lanyard";
 import { useState } from "react";
 import axios from "axios";
-
+import Dock from "../components/animations/Dock";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
+import toast from "react-hot-toast";
 export const Contact = () => {
 
   const [formData, setFormData] = useState({
@@ -22,27 +24,47 @@ export const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setStatus("");
+      e.preventDefault();
+      setLoading(true);
 
-    try {
-      await axios.post(`${import.meta.env.VITE_API_URL}/contact`, formData);
-      setStatus("success");
-      setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
-      setStatus("error");
-      console.error(error);
-    }
+      const toastId = toast.loading("Sending message...");
 
-    setLoading(false);
-  };
+      try {
+        await axios.post(`${import.meta.env.VITE_API_URL}/contact`, formData);
 
+        toast.success("Message sent successfully!", { id: toastId });
+
+        setFormData({ name: "", email: "", message: "" });
+
+      } catch (error) {
+        toast.error("Failed to send message", { id: toastId });
+        console.error(error);
+      }
+
+      setLoading(false);
+    };
+  const items = [
+      {
+        icon: <FaGithub size={20} />,
+        label: "GitHub",
+        onClick: () => window.open("https://github.com/Siddhartha2910", "_blank"),
+      },
+      {
+        icon: <FaLinkedin size={20} />,
+        label: "LinkedIn",
+        onClick: () => window.open("https://www.linkedin.com/in/g-siddhartha-kumar/", "_blank"),
+      },
+      {
+        icon: <FaInstagram size={20} />,
+        label: "Instagram",
+        onClick: () => window.open("https://www.instagram.com/siddhartha__1029/", "_blank"),
+      },
+    ];
   return (
     <section
       id="contact"
       className="relative min-h-screen overflow-hidden bg-black flex items-center px-6 md:px-16 py-20"
-      style={{ scrollMarginTop: "50px" }}
+      style={{ scrollMarginTop: "5px" }}
     >
       {/* Snow Background */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -70,6 +92,7 @@ export const Contact = () => {
 
           <div className="
             w-full max-w-md
+             h-[560px] md:h-[600px]
             backdrop-blur-2xl
             bg-linear-to-br from-white/10 to-white/5
             border border-white/10
@@ -86,7 +109,7 @@ export const Contact = () => {
               Have an idea or collaboration in mind?
               Let’s build something impactful together.
             </p>
-
+            <div >
             <form onSubmit={handleSubmit} className="flex flex-col gap-4">
 
               <input
@@ -131,24 +154,25 @@ export const Contact = () => {
                 {loading ? "Sending..." : "Send Message"}
               </button>
 
-              {status === "success" && (
-                <p className="text-green-400 mt-3 text-sm">
-                  Message sent successfully.
-                </p>
-              )}
-
-              {status === "error" && (
-                <p className="text-red-400 mt-3 text-sm">
-                  Failed to send message. Please try again.
-                </p>
-              )}
+              <div className="flex flex-col items-center">
+                <Dock 
+                  items={items}
+                  panelHeight={60}
+                  baseItemSize={45}
+                  magnification={65}
+                />
+                
+              </div>
 
             </form>
+            </div>
           </div>
+          
         </div>
+        
 
         {/* RIGHT — Lanyard (Hidden on Mobile) */}
-        <div className="hidden md:flex w-1/2 h-125 justify-center items-center">
+        <div className="hidden md:flex w-1/2 h-125 justify-center items-center pt-10">
           <Lanyard position={[0, 0, 24]} gravity={[0, -40, 0]} />
         </div>
 
