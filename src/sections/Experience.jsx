@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Carousel from "../components/animations/Carousel";
 import { useEffect, useState } from "react";
-import DotGrid from "../components/backgrounds/Dotgrid.jsx";
+import DotGrid from "../components/backgrounds/Dotgrid";
 export const Experience = () => {
   const experiences = [
     {
