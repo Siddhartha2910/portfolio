@@ -92,7 +92,7 @@ export const Contact = () => {
 
           <div className="
             w-full max-w-md
-             h-[560px] md:h-[600px]
+             h-140 md:h-150
             backdrop-blur-2xl
             bg-linear-to-br from-white/10 to-white/5
             border border-white/10
