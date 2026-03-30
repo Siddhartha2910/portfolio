@@ -45,7 +45,7 @@ useEffect(() => {
       className="relative bg-black py-24 px-6 md:px-16"
       style={scrollMargin !== "0px" ? { scrollMarginTop: scrollMargin } : undefined}
     >
-    {/* Snow Background */}
+    
           <div className="absolute inset-0 z-0 pointer-events-none">
             <DotGrid
               dotSize={5}
