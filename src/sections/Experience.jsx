@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import Carousel from "../components/animations/Carousel";
 import { useEffect, useState } from "react";
-import DotGrid from "../components/backgrounds/Dotgrid";
 export const Experience = () => {
   const experiences = [
     {
@@ -46,7 +45,7 @@ useEffect(() => {
       style={scrollMargin !== "0px" ? { scrollMarginTop: scrollMargin } : undefined}
     >
     
-          <div className="absolute inset-0 z-0 pointer-events-none">
+          {/* <div className="absolute inset-0 z-0 pointer-events-none">
             <DotGrid
               dotSize={5}
               gap={15}
@@ -58,7 +57,7 @@ useEffect(() => {
               resistance={750}
               returnDuration={1.5}
             />
-          </div>
+          </div> */}
       {/* Heading */}
       <div className="text-center mb-10">
         <h2 className="text-4xl md:text-5xl font-bold relative inline-block mb-4 group">
