@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Carousel from "../components/animations/Carousel";
 import { useEffect, useState } from "react";
+import DotGrid from "../components/backgrounds/DotGrid";
 export const Experience = () => {
   const experiences = [
     {
@@ -44,21 +45,20 @@ useEffect(() => {
       className="relative bg-black py-24 px-6 md:px-16"
       style={scrollMargin !== "0px" ? { scrollMarginTop: scrollMargin } : undefined}
     >
-    
-          {/* <div className="absolute inset-0 z-0 pointer-events-none">
-            <DotGrid
-              dotSize={5}
-              gap={15}
-              baseColor="#000000"
-              activeColor="#737279"
-              proximity={120}
-              shockRadius={250}
-              shockStrength={5}
-              resistance={750}
-              returnDuration={1.5}
-            />
-          </div> */}
-      {/* Heading */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+          <DotGrid
+            dotSize={5}
+            gap={15}
+            baseColor="#1a1a1a"
+            activeColor="#737279"
+            proximity={120}
+            shockRadius={250}
+            shockStrength={5}
+            resistance={750}
+            returnDuration={1.5}
+          />
+      </div>
+      
       <div className="text-center mb-10">
         <h2 className="text-4xl md:text-5xl font-bold relative inline-block mb-4 group">
           Experience
