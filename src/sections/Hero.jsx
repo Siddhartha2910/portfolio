@@ -150,7 +150,7 @@ export const Hero = () => {
             >
             <ButtonX
             as="a"
-            href="/Gade_Siddhartha_Kumar_Resume.pdf"
+            href="/Siddhartha_Kumar_Gade.pdf"
             label="Resume"
             icon={Download}
             />

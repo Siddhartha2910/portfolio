@@ -13,6 +13,8 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173",
         "https://portfolio.vercel.app",  # your main production domain
+        "https://www.gadesiddharthakumar.me", #.me diomain
+        "https://gadesiddharthakumar.me", #.me diomain
     ],
     allow_origin_regex=r"https://.*\.vercel\.app",
     allow_credentials=True,
